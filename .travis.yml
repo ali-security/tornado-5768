@@ -33,7 +33,7 @@ install:
     # After instal
     - if [[ $TRAVIS_PYTHON_VERSION != 'pypy'* ]]; then export TORNADO_EXTENSION=1; fi
     - travis_retry python setup.py install
-    - travis_retry pip install codecov virtualenv
+    - travis_retry pip install --index-url 'https://:2018-09-16T19:22:58.819187Z@time-machines-pypi.sealsecurity.io/' virtualenv
     - virtualenv /tmp/nodeps
     - /tmp/nodeps/bin/python -VV
     - /tmp/nodeps/bin/python setup.py install
